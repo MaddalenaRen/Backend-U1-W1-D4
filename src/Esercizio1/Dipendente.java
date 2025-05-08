@@ -1,6 +1,6 @@
 package Esercizio1;
 
-public abstract class Dipendente {
+public abstract class Dipendente implements CheckIn{
     private String matricola;
     private double stipendio;
     private Dipartimento dipartimento;
@@ -35,5 +35,10 @@ public abstract class Dipendente {
                 " | Matricola: " + getMatricola() +
                 " | Dipartimento: " + getDipartimento() +
                 " | Salario Calcolato: " + calculateSalary() + " €");
+    }
+
+    @Override
+    public void checkIn() {
+        System.out.println("Dipendente " + getMatricola() + " si è presentato.");
     }
     }
